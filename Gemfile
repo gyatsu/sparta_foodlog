@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
+gem 'kaminari'
 gem 'devise'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
