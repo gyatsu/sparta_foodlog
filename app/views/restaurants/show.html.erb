@@ -1,2 +1,15 @@
-<h1>Restaurants#show</h1>
-<p>Find me in app/views/restaurants/show.html.erb</p>
+<div class="row">
+  <div class="col-lg-12">
+    <h1>レストラン詳細</h1>
+    <dl>
+      <dt>店名</dt>
+      <dd><%= @restaurant.name %></dd>
+      <dt>電話番号</dt>
+      <dd><%= @restaurant.tel %></dd>
+      <dt>住所</dt>
+      <dd><%= @restaurant.address %></dd>
+      <dt>ホームページ</dt>
+      <dd><%= @restaurant.url %></dd>
+    </dl>
+  </div>
+</div>
