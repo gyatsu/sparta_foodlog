@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   resources :restaurants
-
+  root 'restaurants#index'
   # get 'restaurants/index'
 
   # get 'restaurants/new'
