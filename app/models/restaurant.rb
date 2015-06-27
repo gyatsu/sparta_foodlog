@@ -3,4 +3,7 @@ class Restaurant < ActiveRecord::Base
   validates :tel,           presence: true, length: { maximum: 15 }
   validates :address,       presence: true
   validates :url,           presence: true
+
+  has_many :reviews
+
 end
