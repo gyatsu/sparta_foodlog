@@ -1,2 +1,21 @@
-<h1>Restaurants#index</h1>
-<p>Find me in app/views/restaurants/index.html.erb</p>
+<h1>レストラン一覧</h1>
+
+<table class="table table-striped">
+  <thead>
+    <th>店名</th>
+    <th>TEL</th>
+    <th>住所</th>
+    <th>URL</th>
+  </thead>
+  <tbody>
+    <% @restaurants.each do |restaurant| %>
+      <tr>
+        <td><%= restaurant.name %></td>
+        <td><%= restaurant.tel %></td>
+        <td><%= restaurant.address %></td>
+        <td><%= restaurant.url %>
+        <td><%= link_to '詳細', restaurant, class: "btn btn-default btn-xs" %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
