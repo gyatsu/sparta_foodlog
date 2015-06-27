@@ -1,17 +1,19 @@
 Rails.application.routes.draw do
-  get 'restaurants/index'
+  resources :restaurants
 
-  get 'restaurants/new'
+  # get 'restaurants/index'
 
-  get 'restaurants/create'
+  # get 'restaurants/new'
 
-  get 'restaurants/edit'
+  # get 'restaurants/create'
 
-  get 'restaurants/update'
+  # get 'restaurants/edit'
 
-  get 'restaurants/show'
+  # get 'restaurants/update'
 
-  get 'restaurants/destroy'
+  # get 'restaurants/show'
+
+  # get 'restaurants/destroy'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
