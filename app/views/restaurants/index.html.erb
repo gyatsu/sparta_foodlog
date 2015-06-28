@@ -1,21 +1,19 @@
+<div class="col-md-8">
 <h1>レストラン一覧</h1>
 
-<table class="table table-striped">
-  <thead>
-    <th>店名</th>
-    <th>TEL</th>
-    <th>住所</th>
-    <th>URL</th>
-  </thead>
-  <tbody>
-    <% @restaurants.each do |restaurant| %>
-      <tr>
-        <td><%= restaurant.name %></td>
-        <td><%= restaurant.tel %></td>
-        <td><%= restaurant.address %></td>
-        <td><%= restaurant.url %>
-        <td><%= link_to '詳細', restaurant, class: "btn btn-default btn-xs" %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+
+
+ <% @restaurants.each do |restaurant| %>
+<div class="jumbotron">
+  <h1><%= restaurant.name %></h1>
+  <p><%= restaurant.tel %></p>
+  <p><%= link_to '詳しくは…', restaurant, class: "btn btn-default btn-xs" %></a></p>
+</div>
+  <% end %>
+</div>
+
+<div class="col-md-4">
+   <h2>オススメの店を追加</h2>
+<a href="/restaurants/new"> <button type="button" class="btn btn-primary">新規追加</button>
+      </div>
+

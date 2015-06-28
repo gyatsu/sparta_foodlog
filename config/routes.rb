@@ -2,6 +2,8 @@ Rails.application.routes.draw do
   devise_for :users
   resources :restaurants
   root 'restaurants#index'
+  resources :reviews, only: [:create, :destroy]
+
   # get 'restaurants/index'
 
   # get 'restaurants/new'
