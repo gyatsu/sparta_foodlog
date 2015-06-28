@@ -21,5 +21,11 @@ test:
   database: db/test.sqlite3
 
 production:
-  <<: *default
-  database: db/production.sqlite3
+  adapter: mysql2
+  encoding: utf8
+  database: foodlog
+  port: 3306
+  username: pyatsu
+  password: aws18021202aws
+  host: localhost
+
