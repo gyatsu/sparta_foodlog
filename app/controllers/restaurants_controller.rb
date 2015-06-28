@@ -39,14 +39,11 @@ class RestaurantsController < ApplicationController
     @reviews = @restaurant.reviews
   end
 
-
-
-
-
   def destroy
     @restaurant = Restaurant.find(params[:id])
+    restaurant_id = @review.restaurant_id
     @restaurant.destroy
-    redirect_to action: 'index'
+    redirect_to restaurant_url(restaurant_id)
   end
 
 
