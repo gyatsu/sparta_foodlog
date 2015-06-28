@@ -1,4 +1,5 @@
 class ReviewsController < ApplicationController
+    before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
    def create
     @review = Review.new(review_params)
     if @review.save
@@ -6,6 +7,14 @@ class ReviewsController < ApplicationController
     else
       redirect_to restaurant_url(@review.restaurant_id)
     end
+  end
+
+  def destroy
+    @review = Review.find(params[:id])
+    restaurant_id = @review.restaurant_id
+    @review.destroy
+    redirect_to restaurant_url(restaurant_id)
+
   end
 
 
